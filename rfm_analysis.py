@@ -421,7 +421,7 @@ def show_modelling(data : pd.DataFrame):
     with row4_14:
         st.image('https://cdn-clalk.nitrocdn.com/KqmKVeLhgFAzHWrUbBzmAbRgoFMrOqoq/assets/static/optimized/rev-8f38008/wp-content/uploads/RFM-labels-main-customer-segments-2.jpg',
                  caption = 'R-F-M Strategy (Sumber : https://bit.ly/3z42IN1)',
-                 width = 700)
+                 width = 500)
     with row4_15:   
         result_rfm = cluster_center[['cluster', 'cluster_category']].merge(result_rfm,
                                                                            on = ['cluster'], 
