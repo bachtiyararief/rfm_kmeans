@@ -451,7 +451,7 @@ def show_modelling(data : pd.DataFrame):
         teks5 = da.Formater(text = teks5).text_markdown(align = 'justify')
         st.markdown('\n{}'.format(teks5), unsafe_allow_html = True) 
         
- if __name__ == "__main__":
+if __name__ == "__main__":
     
     header()
     
