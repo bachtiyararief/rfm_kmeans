@@ -258,7 +258,7 @@ def show_modelling(data : pd.DataFrame):
         teks1 = da.Formater(text = teks1).text_markdown(align = 'justify')
         st.markdown('\n{}'.format(teks1), unsafe_allow_html = True)
                
-    spacer1, row4_2, spacer2, row4_3, spacer3, row4_4, spacer4 = st.columns((0.1, 2, 0.1, 4, 0.1, 2, 0.1))
+    spacer1, row4_2, spacer2, row4_3, spacer3, row4_4, spacer4 = st.columns((0.1, 2, 0.1, 3, 0.1, 2, 0.1))
     with row4_2:
         
         st.markdown('')
