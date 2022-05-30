@@ -44,7 +44,7 @@ def header():
     spacer1, row1, spacer2 = st.columns((0.1, 7.2, 0.1))
     with row1:
         st.title('Customer Segmentation with Recency-Frequency-Monetary (RFM) values and K-Means clustering in Python')
-        st.subheader('Streamlit App by [Bachtiyar M. Arief](https:linkedin.com/bachtiyarma)')
+        st.subheader('Streamlit App by [Bachtiyar M. Arief](https://www.linkedin.com/in/bachtiyarma/)')
         
         teks.append('Setiap pelaku usaha tentu menginginkan produknya laku keras di pasaran.\
                      Oleh karena itu, tidak heran kalau dalam upaya pemasarannya, banyak pelaku usaha\
@@ -258,7 +258,7 @@ def show_modelling(data : pd.DataFrame):
         teks1 = da.Formater(text = teks1).text_markdown(align = 'justify')
         st.markdown('\n{}'.format(teks1), unsafe_allow_html = True)
                
-    spacer1, row4_2, spacer2, row4_3, spacer3, row4_4, spacer4 = st.columns((0.1, 2, 0.1, 2, 0.1, 2, 0.1))
+    spacer1, row4_2, spacer2, row4_3, spacer3, row4_4, spacer4 = st.columns((0.1, 2, 0.1, 4, 0.1, 2, 0.1))
     with row4_2:
         
         st.markdown('')
@@ -373,7 +373,7 @@ def show_modelling(data : pd.DataFrame):
     with row4_9:
         st.image('https://i0.wp.com/blog.rsquaredacademy.com/img/rfm_segments_table.png?w=450&ssl=1',
                  caption = 'Segmentation R-F-M (Sumber : https://bit.ly/3LYyw8X)',
-                 width = 800)
+                 width = 600)
     
     spacer1, row4_10, spacer2 = st.columns((0.1, 7.2, 0.1))
     with row4_10:
