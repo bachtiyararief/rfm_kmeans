@@ -43,7 +43,7 @@ def header():
     
     spacer1, row1, spacer2 = st.columns((0.1, 7.2, 0.1))
     with row1:
-        st.title('Customer Segmentation with Recency-Frequency-Monetary (RFM) values and K-Means clustering in Python')
+        st.image('https://raw.githubusercontent.com/bachtiyararief/rfm_kmeans/main/HeaderRFM.jpg')
         st.subheader('Streamlit App by [Bachtiyar M. Arief](https://www.linkedin.com/in/bachtiyarma/)')
         
         teks.append('Setiap pelaku usaha tentu menginginkan produknya laku keras di pasaran.\
