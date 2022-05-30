@@ -414,7 +414,7 @@ def show_modelling(data : pd.DataFrame):
                  Sehingga diharapkan dengan strategi yang tepat dengan pengambilan keputusan yang bijak \
                  akan mendatangkan keuntungan bagi kedua belah pihak'
                  
-        teks3 = da.Formater(text = teks4).text_markdown(align = 'justify')
+        teks4 = da.Formater(text = teks4).text_markdown(align = 'justify')
         st.markdown('\n{}'.format(teks4), unsafe_allow_html = True) 
     
     spacer1, row4_14, spacer2, row4_15, spacer3 = st.columns((0.1, 4, 0.1, 4, 0.1))
@@ -437,9 +437,21 @@ def show_modelling(data : pd.DataFrame):
             file_name = 'Customer Segmentation.csv',
             mime = 'text/csv',
         )
-
- 
-if __name__ == "__main__":
+        
+    spacer1, row4_16, spacer2 = st.columns((0.1, 7.2, 0.1))
+    with row4_16:
+        st.subheader('6. Kesimpulan')
+        teks5 = 'Marketing yang cerdas memahami pentingnya "kenali klien atau customer Anda".\
+                 Daripada memeriksa seluruh basis klien secara keseluruhan, lebih baik untuk\
+                 mengelompokkan mereka ke dalam kelompok-kelompok tertentu, memahami kualitas setiap pertemuan,\
+                 dan terlibat di dalamnya dengan kesepakatan yang relevan. Salah satu strategi divisi yang\
+                 paling terkenal, mudah digunakan, dan sukses untuk memberdayakan marketing\
+                 dengan memetakan perilaku customer adalah RFM dengan segmentasi Algoritma Clustering K-Means.'
+        
+        teks5 = da.Formater(text = teks5).text_markdown(align = 'justify')
+        st.markdown('\n{}'.format(teks5), unsafe_allow_html = True) 
+        
+ if __name__ == "__main__":
     
     header()
     
