@@ -48,7 +48,7 @@ def header():
         
         teks.append('Setiap pelaku usaha tentu menginginkan produknya laku keras di pasaran.\
                      Oleh karena itu, tidak heran kalau dalam upaya pemasarannya, banyak pelaku usaha\
-                     yang berusaha menawarkan produk barang atau jasanya ke semua orang tanpa ada\
+                     yang berusaha menawarkan produk barang, platform atau jasanya ke semua orang tanpa ada\
                      segmentasi pasar secara khusus. Harapannya, produk barang atau jasanya\
                      mendapat respons yang positif dan sanggup memenuhi kebutuhan setiap orang.\
                      Namun, apakah kondisi di lapangan berjalan seperti itu ? Pada kenyataannya,\
@@ -71,7 +71,7 @@ def header():
             formattext = da.Formater(text = text).text_markdown(align = 'justify')
             st.markdown('\n{}'.format(formattext), unsafe_allow_html = True)
         
-        st.text('\t1. Recency   : Waktu interaksi terakhir pelanggan dengan produk\n2. Frequency : Berapa kali pelanggan berinteraksi dengan produk atau melakukan transaksi dalam periode waktu tertentu\n3. Monetary  : Jumlah total yang dihabiskan oleh pelanggan untuk membeli produk Anda dalam periode waktu tertentu')        
+        st.text('\t1. Recency   : Waktu interaksi (pembelian) terakhir pelanggan dengan platform pembelanjaan atau produk\n2. Frequency : Berapa kali pelanggan berinteraksi dengan produk / platform atau melakukan transaksi dalam periode waktu tertentu\n3. Monetary  : Jumlah total yang dihabiskan oleh pelanggan untuk membeli produk dalam periode waktu tertentu')        
         
         teks1 = "Proses analisa segmentasi pelanggan dengan RFM adalah sebagai berikut"
         
@@ -88,8 +88,11 @@ def show_data(data : pd.DataFrame):
     spacer1, row2, spacer2 = st.columns((0.1, 7.2, 0.1))
     with row2:
         st.subheader('1. Data')
-        teks2 = 'Data yang digunakan pada proses analisa segementasi pelanggan dengan RFM\
-                 bersumber dari API <a href="https://dataset.dqlab.id/">DQLab</a> (<i>dengan <b>contents key</b> : 10%_original_randomstate=42/retail_data_from_*_until_*_reduce</i>).\
+        teks2 = 'Data yang digunakan pada proses analisa segementasi pelanggan dengan RFM,\
+                 merupakan data <i>dummy</i> yang bersumber dari API <a href="https://dataset.dqlab.id/">DQLab</a> \
+                 (<i>dengan <b>contents key</b> : 10%_original_randomstate=42/retail_data_from_*_until_*_reduce</i>)\
+                 yang merupakan data dari DQStore yakni perusahaan yang bergerak dibidang retail \
+                 (Bisnis retail adalah bisnis yang melibatkan penjualan barang atau jasa kepada konsumen dalam jumlah satuan atau eceran).\
                  Dataset mempunyai format .csv yang tersebar pada link yang berbeda sehingga perlu dilakukan proses ekstraksi dan\
                  integrasi data terlebih dahulu.'
                  
@@ -441,12 +444,15 @@ def show_modelling(data : pd.DataFrame):
     spacer1, row4_16, spacer2 = st.columns((0.1, 7.2, 0.1))
     with row4_16:
         st.subheader('6. Kesimpulan')
-        teks5 = 'Marketing yang cerdas memahami pentingnya "kenali klien atau customer Anda".\
-                 Daripada memeriksa seluruh basis klien secara keseluruhan, lebih baik untuk\
-                 mengelompokkan mereka ke dalam kelompok-kelompok tertentu, memahami kualitas setiap pertemuan,\
-                 dan terlibat di dalamnya dengan kesepakatan yang relevan. Salah satu strategi divisi yang\
-                 paling terkenal, mudah digunakan, dan sukses untuk memberdayakan marketing\
-                 dengan memetakan perilaku customer adalah RFM dengan segmentasi Algoritma Clustering K-Means.'
+        teks5 ='Segmentasi yang baik memiliki pengaruh yang signifikan terhadap manajemen konsumen.\
+                Membagi pelanggan ke dalam kelompok berbeda yang didasarkan pada karakteristik dan kebutuhan umum\
+                dapat membantu memasarkan ke setiap segmen secara berbeda dan efektif. \
+                Hal ini juga dapat membantu untuk fokus pada kebutuhan setiap jenis pelanggan pada saat tertentu.\
+                Baik besar atau kecil, segmentasi pelanggan dapat ditargetkan berdasarkan sumber daya atau kebutuhan perusahaan pada masa mendatang.\
+                Salah satu strategi segmentasi pelanggan yang paling terkenal, mudah digunakan, dan sukses untuk memberdayakan marketing\
+                dengan memetakan perilaku pelanggan adalah RFM dengan segmentasi Algoritma Clustering K-Means. K-Means dapat membantu\
+                memetakan pelanggan berdasarkan tingkat <i>recency</i>, <i>frequency</i> maupun <i>monetary</i>-nya sehingga tiap kelompok\
+                pada suatu klaster dapat di-<i>treatment</i> sesuai label yang telah ditentukan.'
         
         teks5 = da.Formater(text = teks5).text_markdown(align = 'justify')
         st.markdown('\n{}'.format(teks5), unsafe_allow_html = True) 
